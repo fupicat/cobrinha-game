@@ -9,15 +9,18 @@ let comida;
 
 let jogo;
 let pause = false;
+let perdeu = false;
 
 // Começa o jogo
 function reset() {
-  if (pause) {
+  if (pause && !perdeu) {
     jogo = setTimeout(jogoTick, 100);
     pause = false;
     return;
   }
   clearTimeout(jogo);
+  pause = false;
+  perdeu = false;
   
   snake = [
     {
@@ -147,6 +150,7 @@ function jogoTick() {
 
     if (head.x == body.x && head.y == body.y) {
       canvas.style.filter = "saturate(0%)";
+      perdeu = true;
       return;
     }
   }
