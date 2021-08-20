@@ -1,0 +1,32 @@
+body {
+  height: 95vh;
+  width: 95vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background: none;
+  border: none;
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
